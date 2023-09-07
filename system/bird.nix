@@ -25,7 +25,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = ["ntfs"];
 
-  networking.hostName = "ciavi"; # Define your hostname.
+  networking.hostName = "bird"; # Define your hostname.
 
   # Enable networking
   networking.networkmanager.enable = true;

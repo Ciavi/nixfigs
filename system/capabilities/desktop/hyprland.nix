@@ -173,6 +173,12 @@
     auth include login
   '';
 
+  # Udev rules for SwayOSD
+  services.udev.extraRules = ''
+    ACTION=="add", SUBSYSTEM=="backlight", RUN+="${pkgs.coreutils}/bin/chgrp video /sys/class/backlight/%k/brightness"
+    ACTION=="add", SUBSYSTEM=="backlight", RUN+="${pkgs.coreutils}/bin/chmod g+w /sys/class/backlight/%k/brightness"
+  '';
+
   systemd = {
     # Hyprland session target
     user.targets.hyprland-session = {
