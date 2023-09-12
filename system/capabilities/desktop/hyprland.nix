@@ -88,6 +88,7 @@
       lxappearance
       mako
       networkmanagerapplet
+      nwg-bar
       pasystray
       playerctl
       qt6.qtwayland

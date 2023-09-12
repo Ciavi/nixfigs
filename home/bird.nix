@@ -13,8 +13,6 @@
       brave
       ffmpegthumbnailer
       firefox
-      fluent-gtk-theme
-      fluent-icon-theme
       gimp
       htop
       inkscape
@@ -22,8 +20,8 @@
       lutris
       mission-center
       obsidian
-      papirus-icon-theme
       pavucontrol
+      qalculate-gtk
       spotify
       thunderbird
       upscayl
@@ -37,12 +35,17 @@
     enable = true;
     font.name = "Oxanium";
     theme = {
-      name = "Dracula";
-      package = pkgs.dracula-theme;
+      name = "Matcha-dark-pueril";
+      package = pkgs.matcha-gtk-theme;
     };
     iconTheme = {
-      name = "Dracula";
-      package = pkgs.dracula-icon-theme;
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme.override {
+        color = "green";
+      };
+    };
+    cursorTheme = {
+      name = "Qogir-ubuntu-dark";
     };
 
     # v3 config
