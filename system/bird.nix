@@ -10,7 +10,7 @@
       ./hardware/bird-hardware.nix
       {nixpkgs.overlays = [(final: prev: {inherit inputs;})];}
       # Include capabilities.
-      ./capabilities/desktop/mate.nix
+      ./capabilities/desktop/hyprland.nix
       {nixpkgs.overlays = [(final: prev: {inherit inputs;})];}
       ./capabilities/entertainment/gaming.nix
       {nixpkgs.overlays = [(final: prev: {inherit inputs;})];}
