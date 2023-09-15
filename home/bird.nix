@@ -45,7 +45,8 @@
       };
     };
     cursorTheme = {
-      name = "Qogir-ubuntu-dark";
+      name = "phinger-cursors";
+      package = pkgs.phinger-cursors;
     };
 
     # v3 config
