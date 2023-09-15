@@ -97,7 +97,7 @@
       rubyPackages.glib2
       slurp
       swayidle
-      swaylock
+      swaylock-effects
       swayosd
       udiskie
       waybar
@@ -167,6 +167,9 @@
   # Enable polkit
   security.polkit.enable = true;
 
+  # SVG support for widgets
+  services.xserver.gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
+
   # Swaylock to work with actual password
   security.pam.services.swaylock.text = ''
     # PAM configuration file for the swaylock screen locker. By default, it includes
@@ -225,7 +228,7 @@
       wantedBy = ["hyprland-session.target"];
       serviceConfig = {
         Type = "simple";
-        ExecStart = "${pkgs.swayidle}/bin/swayidle -w timeout 180 '${pkgs.swaylock}/bin/swaylock -f' timeout 300 '${pkgs.hyprland}/bin/hyprctl \"dispatch dpms off\"' resume '${pkgs.hyprland}/bin/hyprctl \"dispatch dpms on\"'";
+        ExecStart = "${pkgs.swayidle}/bin/swayidle -w timeout 180 '${pkgs.swaylock-effects}/bin/swaylock --clock -f' timeout 300 '${pkgs.hyprland}/bin/hyprctl \"dispatch dpms off\"' resume '${pkgs.hyprland}/bin/hyprctl \"dispatch dpms on\"'";
       };
     };
   };
