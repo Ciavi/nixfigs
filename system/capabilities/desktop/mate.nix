@@ -9,6 +9,6 @@
     desktopManager.mate.enable = true;
 
     # Enable LightDM
-    displayManager.ligtdm.enable = true;
+    displayManager.lightdm.enable = true;
   };
 }
