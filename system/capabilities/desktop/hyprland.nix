@@ -68,7 +68,6 @@
     [
       brightnessctl
       cliphist
-      exa
       glib
       greetd.tuigreet
       grim

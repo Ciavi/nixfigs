@@ -10,7 +10,7 @@
       ./hardware/bird-hardware.nix
       {nixpkgs.overlays = [(final: prev: {inherit inputs;})];}
       # Include capabilities.
-      ./capabilities/desktop/hyprland.nix
+      ./capabilities/desktop/mate.nix
       {nixpkgs.overlays = [(final: prev: {inherit inputs;})];}
       ./capabilities/entertainment/gaming.nix
       {nixpkgs.overlays = [(final: prev: {inherit inputs;})];}
@@ -70,6 +70,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
      dotnet-sdk_7
+     eza
      ffmpeg
      font-awesome
      gh
