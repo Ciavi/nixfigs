@@ -93,6 +93,7 @@
     enableVteIntegration = true;
     bashrcExtra = "(cat ~/.cache/wal/sequences &)\n";
   };
+  programs.powerline-go.enable = true;
   programs.pywal.enable = true;
 
   programs.home-manager.enable = true;
