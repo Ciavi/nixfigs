@@ -28,6 +28,8 @@
       vlc
       vscodium-fhs
       webcord-vencord
+      xfce.orage
+      xfce.ristretto
     ];
   };
 
@@ -65,19 +67,19 @@
     mimeApps = {
       enable = true;
       defaultApplications = {
-        "image/*" = ["ristretto.desktop" "gimp.desktop"];
-        "image/png" = ["ristretto.desktop" "gimp.desktop"];
-        "image/jpeg" = ["ristretto.desktop" "gimp.desktop"];
-        "image/svg+xml" = ["inkscape.desktop"];
+        "image/*" = ["org.xfce.ristretto.desktop" "gimp.desktop"];
+        "image/png" = ["org.xfce.ristretto.desktop" "gimp.desktop"];
+        "image/jpeg" = ["org.xfce.ristretto.desktop" "gimp.desktop"];
+        "image/svg+xml" = ["org.inkscape.Inkscape.desktop"];
         "text/*" = ["codium.desktop"];
         "text/markdown" = ["obsidian.desktop" "codium.desktop"];
         "audio/*" = ["vlc.desktop"];
         "video/*" = ["vlc.desktop"];
-        "x-scheme-handler/http" = ["brave.desktop"];
-        "x-scheme-handler/https" = ["brave.desktop"];
+        "x-scheme-handler/http" = ["brave-browser.desktop"];
+        "x-scheme-handler/https" = ["brave-browser.desktop"];
         "application/javascript" = ["codium.desktop"];
         "application/json" = ["codium.desktop"];
-        "application/pdf" = ["brave.desktop"];
+        "application/pdf" = ["brave-browser.desktop"];
         "application/xhtml+xml" = ["codium.desktop"];
         "application/x-httpd-php" = ["codium.desktop"];
       };

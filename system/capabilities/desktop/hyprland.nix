@@ -102,8 +102,6 @@
       waybar
       wttrbar
       xcur2png
-      xfce.orage
-      xfce.ristretto
       xwaylandvideobridge
     ];
   };
