@@ -11,6 +11,9 @@
       bitwarden-cli
       bottles
       brave
+      (pkgs.discord.override {
+        withVencord = true;
+      })
       ffmpegthumbnailer
       firefox
       gimp
@@ -26,8 +29,7 @@
       thunderbird
       upscayl
       vlc
-      vscodium-fhs
-      webcord-vencord
+      vscode-fhs
       xfce.orage
       xfce.ristretto
     ];
@@ -71,17 +73,17 @@
         "image/png" = ["org.xfce.ristretto.desktop" "gimp.desktop"];
         "image/jpeg" = ["org.xfce.ristretto.desktop" "gimp.desktop"];
         "image/svg+xml" = ["org.inkscape.Inkscape.desktop"];
-        "text/*" = ["codium.desktop"];
-        "text/markdown" = ["obsidian.desktop" "codium.desktop"];
+        "text/*" = ["code.desktop"];
+        "text/markdown" = ["obsidian.desktop" "code.desktop"];
         "audio/*" = ["vlc.desktop"];
         "video/*" = ["vlc.desktop"];
         "x-scheme-handler/http" = ["brave-browser.desktop"];
         "x-scheme-handler/https" = ["brave-browser.desktop"];
-        "application/javascript" = ["codium.desktop"];
-        "application/json" = ["codium.desktop"];
+        "application/javascript" = ["code.desktop"];
+        "application/json" = ["code.desktop"];
         "application/pdf" = ["brave-browser.desktop"];
-        "application/xhtml+xml" = ["codium.desktop"];
-        "application/x-httpd-php" = ["codium.desktop"];
+        "application/xhtml+xml" = ["code.desktop"];
+        "application/x-httpd-php" = ["code.desktop"];
       };
     };
   };
