@@ -19,6 +19,7 @@
       gimp
       htop
       inkscape
+      insomnia
       kitty
       lutris
       mission-center
