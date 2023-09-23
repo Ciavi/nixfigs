@@ -33,37 +33,37 @@
         pname = "xwaylandvideobridge";
 	      version = "unstable-2023-08-05";
 	
-      src = fetchgit {
-        url = "https://github.com/Ciavi/xwaylandvideobridge.git";
-        rev = "2d90116cc61aa2f31f9519c11fc760100fabb14e";
-        hash = "sha256-zKK4uMg6lOnhpwuUR+is4yCKjvdC1jkF50IcyBnWybM=";
+        src = fetchgit {
+          url = "https://github.com/Ciavi/xwaylandvideobridge.git";
+          rev = "2d90116cc61aa2f31f9519c11fc760100fabb14e";
+          hash = "sha256-zKK4uMg6lOnhpwuUR+is4yCKjvdC1jkF50IcyBnWybM=";
+        };
+            
+        nativeBuildInputs = [
+          cmake
+          extra-cmake-modules
+          pkg-config
+        ];
+
+        buildInputs = [
+          qt5.qtbase
+          qt5.qtquickcontrols2
+          qt5.qtx11extras
+          libsForQt5.kdelibs4support
+          (libsForQt5.kpipewire.overrideAttrs (oldAttrs: {
+            version = "unstable-2023-05-23";
+            src = fetchFromGitLab {
+              domain = "invent.kde.org";
+              owner = "plasma";
+              repo = "kpipewire";
+              rev = "600505677474a513be4ea8cdc8586f666be7626d";
+              hash = "sha256-ME/9xOyRvvPDiYB1SkJLMk4vtarlIgYdlereBrYTcL4=";
+            };
+          }))
+        ];
+
+        dontWrapQtApps = true;
       };
-          
-      nativeBuildInputs = [
-        cmake
-        extra-cmake-modules
-        pkg-config
-      ];
-
-      buildInputs = [
-        qt5.qtbase
-        qt5.qtquickcontrols2
-        qt5.qtx11extras
-        libsForQt5.kdelibs4support
-        (libsForQt5.kpipewire.overrideAttrs (oldAttrs: {
-          version = "unstable-2023-05-23";
-          src = fetchFromGitLab {
-            domain = "invent.kde.org";
-            owner = "plasma";
-            repo = "kpipewire";
-            rev = "600505677474a513be4ea8cdc8586f666be7626d";
-            hash = "sha256-ME/9xOyRvvPDiYB1SkJLMk4vtarlIgYdlereBrYTcL4=";
-          };
-        }))
-      ];
-
-	    dontWrapQtApps = true;
-    };
     in
     [
       brightnessctl
@@ -85,7 +85,7 @@
       libsForQt5.qt5.qtx11extras
       libva
       lxappearance
-      mako
+      # mako
       networkmanagerapplet
       nwg-bar
       pasystray
@@ -97,6 +97,7 @@
       slurp
       swayidle
       swaylock-effects
+      swaynotificationcenter
       swayosd
       udiskie
       waybar
