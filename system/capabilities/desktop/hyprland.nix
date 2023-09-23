@@ -106,6 +106,7 @@
       wttrbar
       xcur2png
       xwaylandvideobridge
+      wdisplays
     ];
   };
 
