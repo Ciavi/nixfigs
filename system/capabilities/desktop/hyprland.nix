@@ -10,22 +10,24 @@
   environment = {
     sessionVariables = {
       __GLX_VENDOR_LIBRARY_NAME = "amdvlk";
-      CLUTTER_BACKEND = "wayland";
       GTK_USE_PORTAL = "1";
       LIBVA_DRIVER_NAME = "amdvlk";
       NIXOS_OZONE_WL = "1";
       NIXOS_XDG_OPEN_USE_PORTAL = "1";
-      QT_QPA_PLATFORMTHEME = "gtk3";
-      QT_SCALE_FACTOR = "1";
-      QT_QPA_PLATFORM = "wayland-egl;xcb";
-      QT_WAYLAND_DISABLE_WINDOWDECORATOR = "1";
-      QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-      WLR_DRM_DEVICES = "/dev/dri/card1:/dev/dri/card0";
-      WLR_RENDERER = "vulkan";
-      WLR_RENDER_DRM_DEVICE = "/dev/dri/card1";
+      WLR_RENDERER = "amdvlk";
+
+      CLUTTER_BACKEND = "wayland";
+      GDK_BACKEND = "wayland,x11";
+      QT_QPA_PLATFORM = "wayland;xcb";
+
       XDG_CURRENT_DESKTOP = "Hyprland";
       XDG_SESSION_DESKTOP = "Hyprland";
       XDG_SESSION_TYPE = "wayland";
+
+      QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+      QT_QPA_PLATFORMTHEME = "gtk3";
+      QT_SCALE_FACTOR = "1";
+      QT_WAYLAND_DISABLE_WINDOWDECORATOR = "1";
     };
     systemPackages = with pkgs;
     let
@@ -110,7 +112,6 @@
   # Hyprland
   programs.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     xwayland.enable = true;
   };
 

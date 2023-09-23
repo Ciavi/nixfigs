@@ -13,11 +13,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { self, nixpkgs, aagl, home-manager, hyprland, ... }@inputs:
+  outputs = { self, nixpkgs, aagl, home-manager, ... }@inputs:
   let
     inherit (self) outputs;
   in
