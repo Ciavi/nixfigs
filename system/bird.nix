@@ -12,6 +12,8 @@
       # Include capabilities.
       ./capabilities/desktop/hyprland.nix
       {nixpkgs.overlays = [(final: prev: {inherit inputs;})];}
+      ./capabilities/development/frontend.nix
+      {nixpkgs.overlays = [(final: prev: {inherit inputs;})];}
       ./capabilities/entertainment/gaming.nix
       {nixpkgs.overlays = [(final: prev: {inherit inputs;})];}
       ./capabilities/tools/remoting.nix
