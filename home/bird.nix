@@ -8,10 +8,9 @@
 
     packages = with pkgs; [
       bitwarden
-      bitwarden-cli
       bottles
       brave
-      (pkgs.discord.override {
+      (discord.override {
         withVencord = true;
       })
       ffmpegthumbnailer
@@ -96,8 +95,12 @@
     enableVteIntegration = true;
     bashrcExtra = "(cat ~/.cache/wal/sequences &)\n";
   };
+  programs.obs-studio = {
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+    ];
+  };
   programs.powerline-go.enable = true;
-  programs.pywal.enable = true;
-
   programs.home-manager.enable = true;
 }

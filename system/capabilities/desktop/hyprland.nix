@@ -32,13 +32,13 @@
     systemPackages = with pkgs;
     let
       xwaylandvideobridge = with pkgs; stdenv.mkDerivation rec {
-        pname = "xwaylandvideobridge";
-	      version = "unstable-2023-08-05";
+        pname = "hypr-xwaylandvideobridge";
+	      version = "unstable-2023-09-24";
 	
         src = fetchgit {
-          url = "https://github.com/Ciavi/xwaylandvideobridge.git";
-          rev = "2d90116cc61aa2f31f9519c11fc760100fabb14e";
-          hash = "sha256-zKK4uMg6lOnhpwuUR+is4yCKjvdC1jkF50IcyBnWybM=";
+          url = "https://github.com/Ciavi/hypr-xwaylandvideobridge.git";
+          rev = "39756d9a7a4ffd4d6563cad55c8c253d060a34ec";
+          hash = "sha256-UJ7PZjWsI2i1F3Yk0iOAo0AAGTJU9/ZiORfI0c/rrCU=";
         };
             
         nativeBuildInputs = [
@@ -53,13 +53,11 @@
           qt5.qtx11extras
           libsForQt5.kdelibs4support
           (libsForQt5.kpipewire.overrideAttrs (oldAttrs: {
-            version = "unstable-2023-05-23";
-            src = fetchFromGitLab {
-              domain = "invent.kde.org";
-              owner = "plasma";
-              repo = "kpipewire";
-              rev = "600505677474a513be4ea8cdc8586f666be7626d";
-              hash = "sha256-ME/9xOyRvvPDiYB1SkJLMk4vtarlIgYdlereBrYTcL4=";
+            version = "unstable-2023-09-24";
+            src = fetchgit {
+              url = "https://invent.kde.org/plasma/kpipewire";
+              rev = "0dadd2ecc59b474e8ababefb8f4093c1bbe74757";
+              hash = "sha256-9A5UucBEMRWdzKFOdYqcuxM2f7Vyvw+Ke0qPwoK5R2c=";
             };
           }))
         ];
@@ -73,6 +71,7 @@
       glib
       greetd.tuigreet
       grim
+      gtk2
       gtk3
       hyprpaper
       hyprpicker
@@ -80,18 +79,18 @@
       libcanberra-gtk3
       libnotify
       libsForQt5.kdelibs4support
-      libsForQt5.polkit-kde-agent
       libsForQt5.qt5.qtbase
       libsForQt5.qt5.qtquickcontrols2
+      libsForQt5.qtstyleplugins
       libsForQt5.qt5.qtwayland
       libsForQt5.qt5.qtx11extras
       libva
       lxappearance
-      # mako
       networkmanagerapplet
       nwg-bar
       pasystray
       playerctl
+      polkit_gnome
       qt6.qtwayland
       rofi-wayland
       rofimoji
@@ -192,15 +191,15 @@
       after = ["graphical-session-pre.target"];
     };
     
-    # Polkit KDE agent service
-    user.services.polkit-kde-authentication-agent-1 = {
-      description = "KDE policy kit authentication agent";
+    # Polkit Gnome agent service
+    user.services.polkit-gnome-authentication-agent-1 = {
+      description = "Gnome policy kit authentication agent";
       wantedBy = ["hyprland-session.target"];
       wants = ["hyprland-session.target"];
       after = ["hyprland-session.target"];
       serviceConfig = {
         Type = "simple";
-        ExecStart = "${pkgs.libsForQt5.polkit-kde-agent}/libexec/polkit-kde-authentication-agent-1";
+        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
         Restart = "on-failure";
         RestartSec = 1;
         TimeoutStopSec = 10;

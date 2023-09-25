@@ -7,6 +7,17 @@
       pip
       (
         buildPythonPackage rec {
+          pname = "pywal";
+          version = "3.3.0";
+          doCheck = false;
+          src = fetchgit {
+            url = "https://github.com/dylanaraps/pywal";
+            hash = "sha256-La6ErjbGcUbk0D2G1eriu02xei3Ki9bjNme44g4jAF0=";
+          };
+        }
+      )
+      (
+        buildPythonPackage rec {
           pname = "pywalfox";
           version = "2.7.4";
           doCheck = false;

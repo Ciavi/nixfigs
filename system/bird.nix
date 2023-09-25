@@ -65,7 +65,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    wireplumber.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -107,7 +106,7 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
   services.upower.enable = true;
-
+  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
