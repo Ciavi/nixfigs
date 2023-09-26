@@ -19,6 +19,9 @@
       ./capabilities/entertainment/gaming.nix
       {nixpkgs.overlays = [(final: prev: {inherit inputs;})];}
       ./capabilities/tools/remoting.nix
+      {nixpkgs.overlays = [(final: prev: {inherit inputs;})];}
+      ./capabilities/tools/virtualisation.nix
+      {nixpkgs.overlays = [(final: prev: {inherit inputs;})];}
       ./capabilities/users/ciavi.nix
     ];
 

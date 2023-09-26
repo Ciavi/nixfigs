@@ -4,6 +4,6 @@
   users.users.ciavi = {
     isNormalUser = true;
     description = "ciavi";
-    extraGroups = [ "networkmanager" "video" "wheel" ];
+    extraGroups = [ "docker" "networkmanager" "video" "wheel" ];
   };
 }
