@@ -33,6 +33,7 @@
   [
     dotnet-sdk_7
     gcc13
+    gnumake
     jdk17
     mono
     mono5
