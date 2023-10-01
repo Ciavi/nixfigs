@@ -77,11 +77,11 @@
         "text/markdown" = ["obsidian.desktop" "code.desktop"];
         "audio/*" = ["vlc.desktop"];
         "video/*" = ["vlc.desktop"];
-        "x-scheme-handler/http" = ["brave-browser.desktop"];
-        "x-scheme-handler/https" = ["brave-browser.desktop"];
+        "x-scheme-handler/http" = ["firefox.desktop" "brave-broser.desktop"];
+        "x-scheme-handler/https" = ["firefox.desktop" "brave-broser.desktop"];
         "application/javascript" = ["code.desktop"];
         "application/json" = ["code.desktop"];
-        "application/pdf" = ["brave-browser.desktop"];
+        "application/pdf" = ["firefox.desktop" "brave-broser.desktop"];
         "application/xhtml+xml" = ["code.desktop"];
         "application/x-httpd-php" = ["code.desktop"];
       };
