@@ -32,7 +32,8 @@
   in
   [
     dotnet-sdk_7
-    jdk20
+    gcc13
+    jdk17
     mono
     mono5
     mono4
