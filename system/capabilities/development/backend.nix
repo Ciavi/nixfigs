@@ -36,8 +36,10 @@
     gnumake
     jdk17
     mono
-    mono5
     mono4
+    mono5
+    nvc
     (python311.withPackages python-packages)
+    vhdl-ls
   ];
 }
