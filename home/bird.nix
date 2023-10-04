@@ -33,6 +33,12 @@
       xfce.orage
       xfce.ristretto
     ];
+
+    shellAliases = {
+      gcw = "gcc -Wall -Wextra";
+      li = "eza -la";
+      lih = "eza -lah";
+    };
   };
 
   gtk = {
