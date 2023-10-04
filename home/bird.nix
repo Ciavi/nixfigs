@@ -35,7 +35,7 @@
     ];
 
     shellAliases = {
-      gcx = "gcc -Wall -Wextra -D_FORTIFY_SOURCE=2 -fsanitize=bounds -fsanitize-undefined-trap-on-error -fstrict-flex-arrays";
+      gcx = "gcc -O2 -Wall -Wextra -D_FORTIFY_SOURCE=2 -fsanitize=bounds -fsanitize-undefined-trap-on-error -fstrict-flex-arrays";
       li = "eza -la";
       lih = "eza -lah";
     };
