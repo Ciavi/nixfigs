@@ -33,7 +33,7 @@
   [
     dotnet-sdk_7
     gcc13
-    ghdl
+    ghdl-llvm
     gnumake
     jdk17
     mono
