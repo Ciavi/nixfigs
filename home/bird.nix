@@ -8,6 +8,7 @@
 
     packages = with pkgs; [
       bitwarden
+      blender
       bottles
       brave
       (discord.override {
