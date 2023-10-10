@@ -64,7 +64,6 @@
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;
     };
-
     # v4 config
     gtk4.extraConfig = {
       gtk-application-prefer-dark-theme = 1;
