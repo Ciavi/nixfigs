@@ -69,6 +69,7 @@
       brightnessctl
       cliphist
       glib
+      gnome.file-roller
       greetd.tuigreet
       grim
       gtk2
