@@ -32,13 +32,13 @@
     systemPackages = with pkgs;
     let
       xwaylandvideobridge = with pkgs; stdenv.mkDerivation rec {
-        pname = "hypr-xwaylandvideobridge";
-	      version = "unstable-2023-09-24";
+        pname = "xwaylandvideobridge";
+	      version = "unstable-2023-10-16";
 	
         src = fetchgit {
-          url = "https://github.com/Ciavi/hypr-xwaylandvideobridge.git";
-          rev = "39756d9a7a4ffd4d6563cad55c8c253d060a34ec";
-          hash = "sha256-UJ7PZjWsI2i1F3Yk0iOAo0AAGTJU9/ZiORfI0c/rrCU=";
+          url = "https://github.com/KDE/xwaylandvideobridge.git";
+          rev = "bc513009754a18d4901b743ee6b5a861a4353efa";
+          hash = "sha256-BjcH15az11+GCLeGknCA8GvXgtakJZcJj6EIZjon0RE=";
         };
             
         nativeBuildInputs = [
@@ -53,11 +53,11 @@
           qt5.qtx11extras
           libsForQt5.kdelibs4support
           (libsForQt5.kpipewire.overrideAttrs (oldAttrs: {
-            version = "unstable-2023-09-24";
+            version = "unstable-2023-10-16";
             src = fetchgit {
               url = "https://invent.kde.org/plasma/kpipewire";
-              rev = "0dadd2ecc59b474e8ababefb8f4093c1bbe74757";
-              hash = "sha256-9A5UucBEMRWdzKFOdYqcuxM2f7Vyvw+Ke0qPwoK5R2c=";
+              rev = "e08b7be1f2a7bdaed2291cd5dc6374d6535db1b8";
+              hash = "sha256-nipZKj0NqthpexXgQCtJvA3mwWfIn58zsN6usJfm6pQ=";
             };
           }))
         ];
