@@ -43,5 +43,6 @@
     nvc
     (python311.withPackages python-packages)
     vhdl-ls
+    xyce
   ];
 }
